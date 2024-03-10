@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    max-width: 708px;
+    width: 100%;
+    max-height: 112px;
+    height: 100%;
+    margin-top: 51px;
+    /* margin-left: 64px; */
+    padding: 0px, 88px, 0px, 0px;
+    font-family: 'Roboto';
+}
+
+.header__headline {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -0.6399999856948853px;
+    text-align: left;
+}
+
+.header__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.3799999952316284px;
+    text-align: left;
+}
+
+/* Content */
+.content {
+    display: grid;
+    max-width: 1600px;
+    width: 100%;
+    border-radius: 32px;
+    margin-left: 64px;
+    margin-top: 227px;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 376px 512px 240px 376px;
+    grid-template-rows: 335px 335px;
+    grid-template-areas: 
+    "a c d d"
+    "b c e f"
+    ;
+    font-family: 'Roboto';
+}
+
+.content__item {
+    border-radius: 20px; 
+    position: relative;   
+}
+
+.content__item-text {
+    position: absolute;
+    bottom: 20px;
+    font-style: none;
+    color: white;
+    margin-left: 35px;
+}
+
+.content__headline {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.3799999952316284px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.content__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.item1 {
+    grid-area: a;
+}
+
+.item2 {
+    grid-area: b;
+}
+
+.item3 {
+    grid-area: c;
+}
+
+.item4 {
+    grid-area: d;
+}
+
+.item5 {
+    grid-area: e;
+}
+
+.item6 {
+    grid-area: f;
+}
+
+@media (max-width: 1049px) {
+    .content {  
+        max-width: 921px;
+        width: 100%;
+        max-height: 1501.03px;
+        margin-top: 51px;
+        margin-left: 64px;
+        border-radius: 32px;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: 254px 254px 413px 340px;
+        grid-template-areas: 
+        "c c f"
+        "c c a"
+        "d d d"
+        "e b b"
+        ;
+    }
+}
+
+@media (max-width: 475px) {
+   .content {
+    max-width: 425px;
+    width: 100%;
+    height: 1564px;
+    margin-top: 215.36px;
+    margin-left: 25px;
+    border-radius: 32px;
+    grid-template-columns: repeat(1, 425px);
+    grid-template-rows: repeat(4, 240px);
+    grid-template-areas: 
+    'c'
+    'd'
+    'f'
+    'a'
+    'b'
+    'e'
+    ;
+   }
+}
