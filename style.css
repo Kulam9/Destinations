@@ -13,8 +13,8 @@ body {
     width: 100%;
     max-height: 112px;
     height: 100%;
+    margin-left: 3%;
     margin-top: 51px;
-    padding: 0px, 88px, 0px, 0px;
     font-family: 'Roboto';
 }
 
@@ -32,21 +32,17 @@ body {
     line-height: 36px;
     letter-spacing: -0.3799999952316284px;
     text-align: left;
+    margin-top: 7%;
 }
 
 /* Content */
 .content {
     display: grid;
-    max-width: 1600px;
     width: 100%;
-    border-radius: 32px;
-    margin-left: 64px;
-    margin-top: 227px;
+    padding: 3%;
     gap: 30px;
     justify-content: center;
-    align-content: center;
-    grid-template-columns: 376px 512px 240px 376px;
-    grid-template-rows: 335px 335px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-template-areas: 
     "a c d d"
     "b c e f"
@@ -112,13 +108,8 @@ body {
 @media (max-width: 1049px) {
     .content {  
         max-width: 921px;
-        width: 100%;
-        max-height: 1501.03px;
-        margin-top: 51px;
-        margin-left: 64px;
-        border-radius: 32px;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: 254px 254px 413px 340px;
+        margin: 10% auto;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
         grid-template-areas: 
         "c c f"
         "c c a"
@@ -130,14 +121,10 @@ body {
 
 @media (max-width: 475px) {
    .content {
-    max-width: 425px;
-    width: 100%;
-    height: 1564px;
-    margin-top: 215.36px;
-    margin-left: 25px;
-    border-radius: 32px;
-    grid-template-columns: repeat(1, 425px);
-    grid-template-rows: repeat(4, 240px);
+    gap: 1%;
+    margin: 10% 1%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,240px);
     grid-template-areas: 
     'c'
     'd'
@@ -147,4 +134,11 @@ body {
     'e'
     ;
    }
+}
+
+.content__item-img {
+    border-radius: 32px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
